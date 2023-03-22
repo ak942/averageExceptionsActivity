@@ -8,21 +8,21 @@ def calculator():
     
     finished = False
     numbers = []
-    # try: 
-    #     if len(numbers) != 0:
-    # except IndexError:
-    #     print("You must enter at least one number before calculcating an average")
         
     while not finished:
         user_input = input("Enter an integer or 'compute': ")
         
-        
+        if len(numbers) == 0 and user_input =="compute":
+             raise ZeroDivisionError ("cannot compute average of an empty collection")
+        else:
+             continue
+
         if user_input == "compute":
-            try: 
+            # try: 
                 print_average(numbers)
                 finished = True
-            except ZeroDivisionError:
-                print("cannot compute average of an empty collection")
+            # except ZeroDivisionError:
+            #     print("cannot compute average of an empty collection")
                 
 
         else:
@@ -43,3 +43,4 @@ def print_average(numbers):
 def rounded_average(numbers):
     avg = sum(numbers) / len(numbers)
     return floor(avg)
+    
