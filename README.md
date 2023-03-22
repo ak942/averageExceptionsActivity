@@ -4,19 +4,17 @@
 
 1. Have one team member fork AND clone this repository. They will be the driver. All commands and code will be run on their computer.
 
-2. Make sure you do not have a virtual environment from another project active. We will create a new virtual environment for this activity.
-
-3. Navigate to the activity directory and create a virtual environment inside it.
+2. Create a virtual environment
 ```
 python3 -m venv venv
 ```
 
-4. Activate the virtual environment.
+3. Activate the virtual environment
 ```
 source venv/bin/activate
 ```
 
-5. Install requirements.
+4. Install requirements
 ```
 pip install -r requirements.txt
 ```
@@ -35,7 +33,7 @@ In particular, what is the try/except doing?
 
 ## Wave 2: Raising a better exception.
 
-1. Modify the average function. Make it so that it does NOT raise a `ZeroDivisionError`. Instead, have it raise a `ValueError` when an empty list is passed in. The description of the new error you create should be `cannot compute average of an empty collection`.
+1. Modify the average function. Make it so that it does NOT raise a `ZeroDivisionError`. Instead, have it raise a `ValueError`. The description of the new error you create should be `cannot compute average of an empty collection`.
 
 2. Run the code again, attempting to compute an average before entering any numbers. Verify that your new exception shows up.
 
