@@ -8,6 +8,11 @@ def calculator():
     
     finished = False
     numbers = []
+    # try: 
+    #     if len(numbers) != 0:
+    # except IndexError:
+    #     print("You must enter at least one number before calculcating an average")
+        
     while not finished:
         user_input = input("Enter an integer or 'compute': ")
         
